@@ -1,0 +1,328 @@
+{
+  "dishes": [
+    {
+      "id": "d1",
+      "name": {
+        "en": "Sunday Roast Beef",
+        "ur": "روسٹ بیف",
+        "pl": "Pieczeń wołowa",
+        "ar": "لحم مشوي"
+      },
+      "desc": "Yorkshire pudding, roast potatoes, seasonal veg, red wine gravy",
+      "price": 16.5,
+      "category": "mains",
+      "stock": 6,
+      "tags": [
+        "Signature"
+      ],
+      "emoji": "🍖"
+    },
+    {
+      "id": "d2",
+      "name": {
+        "en": "Fish & Chips",
+        "ur": "فش اینڈ چپس",
+        "pl": "Ryba z frytkami",
+        "ar": "سمك ورقائق"
+      },
+      "desc": "Beer-battered haddock, triple-cooked chips, mushy peas",
+      "price": 14,
+      "category": "mains",
+      "stock": 3,
+      "tags": [
+        "Best seller"
+      ],
+      "emoji": "🐟"
+    },
+    {
+      "id": "d3",
+      "name": {
+        "en": "Chicken Tikka Masala",
+        "ur": "چکن تکہ مسالہ",
+        "pl": "Kurczak tikka masala",
+        "ar": "دجاج تكا مسالا"
+      },
+      "desc": "Charred thigh, tomato cream sauce, basmati, naan",
+      "price": 13.5,
+      "category": "mains",
+      "stock": 12,
+      "tags": [
+        "Spicy"
+      ],
+      "emoji": "🍛"
+    },
+    {
+      "id": "d4",
+      "name": {
+        "en": "Lamb Seekh Kebab",
+        "ur": "سیخ کباب",
+        "pl": "Kebab jagnięcy",
+        "ar": "كباب لحم"
+      },
+      "desc": "Clay oven, mint yoghurt, pickled onion",
+      "price": 11,
+      "category": "grill",
+      "stock": 0,
+      "tags": [
+        "Halal"
+      ],
+      "emoji": "🥩"
+    },
+    {
+      "id": "d5",
+      "name": {
+        "en": "Peri Peri Half Chicken",
+        "ur": "پیری پیری چکن",
+        "pl": "Kurczak peri peri",
+        "ar": "دجاج بيري بيري"
+      },
+      "desc": "Flame grilled, medium heat, house slaw",
+      "price": 12.5,
+      "category": "grill",
+      "stock": 9,
+      "tags": [
+        "Halal"
+      ],
+      "emoji": "🍗"
+    },
+    {
+      "id": "d6",
+      "name": {
+        "en": "Halloumi Fries",
+        "ur": "ہالومی فرائز",
+        "pl": "Frytki halloumi",
+        "ar": "بطاطس حلومي"
+      },
+      "desc": "Honey, chilli, black seed",
+      "price": 6,
+      "category": "sides",
+      "stock": 2,
+      "tags": [
+        "Veg"
+      ],
+      "emoji": "🧀"
+    },
+    {
+      "id": "d7",
+      "name": {
+        "en": "Loaded Chips",
+        "ur": "لوڈڈ چپس",
+        "pl": "Frytki z dodatkami",
+        "ar": "بطاطس محملة"
+      },
+      "desc": "Cheese curds, gravy, spring onion",
+      "price": 5.5,
+      "category": "sides",
+      "stock": 20,
+      "tags": [],
+      "emoji": "🍟"
+    },
+    {
+      "id": "d8",
+      "name": {
+        "en": "Masala Chai",
+        "ur": "مسالہ چائے",
+        "pl": "Herbata masala",
+        "ar": "شاي بالحليب"
+      },
+      "desc": "Cardamom, clove, whole milk",
+      "price": 3.2,
+      "category": "drinks",
+      "stock": 40,
+      "tags": [],
+      "emoji": "☕"
+    },
+    {
+      "id": "d9",
+      "name": {
+        "en": "Craft Lager",
+        "ur": "کرافٹ لیگر",
+        "pl": "Lager rzemieślniczy",
+        "ar": "جعة"
+      },
+      "desc": "Local brewery, 4.2%, pint",
+      "price": 5.8,
+      "category": "drinks",
+      "stock": 30,
+      "tags": [],
+      "emoji": "🍺"
+    },
+    {
+      "id": "d10",
+      "name": {
+        "en": "Sticky Toffee Pudding",
+        "ur": "ٹافی پڈنگ",
+        "pl": "Pudding toffi",
+        "ar": "حلوى التوفي"
+      },
+      "desc": "Butterscotch, clotted cream",
+      "price": 7,
+      "category": "desserts",
+      "stock": 4,
+      "tags": [],
+      "emoji": "🍮"
+    },
+    {
+      "id": "d11",
+      "name": {
+        "en": "Baklava Plate",
+        "ur": "بقلاوہ",
+        "pl": "Baklawa",
+        "ar": "بقلاوة"
+      },
+      "desc": "Pistachio, rose syrup, three pieces",
+      "price": 6.5,
+      "category": "desserts",
+      "stock": 7,
+      "tags": [],
+      "emoji": "🍯"
+    },
+    {
+      "id": "d12",
+      "name": {
+        "en": "Mixed Grill Platter",
+        "ur": "مکس گرل",
+        "pl": "Półmisek z grilla",
+        "ar": "مشاوي مشكلة"
+      },
+      "desc": "Lamb chop, wings, kofta, grilled tomato",
+      "price": 22,
+      "category": "grill",
+      "stock": 5,
+      "tags": [
+        "Share"
+      ],
+      "emoji": "🍽️"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_101",
+      "code": "#EAT-1042",
+      "tableNumber": "12",
+      "items": [
+        {
+          "dishId": "d1",
+          "name": "Sunday Roast Beef",
+          "price": 16.5,
+          "quantity": 1,
+          "emoji": "🍖"
+        },
+        {
+          "dishId": "d8",
+          "name": "Masala Chai",
+          "price": 3.2,
+          "quantity": 2,
+          "emoji": "☕"
+        }
+      ],
+      "subtotal": 22.9,
+      "serviceFee": 2.29,
+      "total": 25.19,
+      "status": "preparing",
+      "guestName": "Hamza Malik",
+      "guestPhone": "+447911123456",
+      "createdAt": "2026-08-17T08:28:42.033Z"
+    },
+    {
+      "id": "ord_102",
+      "code": "#EAT-1043",
+      "tableNumber": "04",
+      "items": [
+        {
+          "dishId": "d2",
+          "name": "Fish & Chips",
+          "price": 14,
+          "quantity": 2,
+          "emoji": "🐟"
+        },
+        {
+          "dishId": "d6",
+          "name": "Halloumi Fries",
+          "price": 6,
+          "quantity": 1,
+          "emoji": "🧀"
+        }
+      ],
+      "subtotal": 34,
+      "serviceFee": 3.4,
+      "total": 37.4,
+      "status": "pending",
+      "guestName": "Sarah Jenkins",
+      "guestPhone": "+447700900077",
+      "createdAt": "2026-08-17T08:38:42.033Z"
+    },
+    {
+      "id": "ord_100",
+      "code": "#EAT-1041",
+      "tableNumber": "08",
+      "items": [
+        {
+          "dishId": "d3",
+          "name": "Chicken Tikka Masala",
+          "price": 13.5,
+          "quantity": 2,
+          "emoji": "🍛"
+        },
+        {
+          "dishId": "d9",
+          "name": "Craft Lager",
+          "price": 5.8,
+          "quantity": 2,
+          "emoji": "🍺"
+        }
+      ],
+      "subtotal": 38.6,
+      "serviceFee": 3.86,
+      "total": 42.46,
+      "status": "completed",
+      "guestName": "David Miller",
+      "guestPhone": "+447700900123",
+      "createdAt": "2026-08-17T07:43:42.033Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "res_201",
+      "code": "#RES-882",
+      "name": "Ali Khan",
+      "phone": "+447812345678",
+      "guests": 4,
+      "date": "2026-08-17",
+      "time": "19:30",
+      "status": "confirmed",
+      "createdAt": "2026-08-17T06:43:42.033Z"
+    },
+    {
+      "id": "res_202",
+      "code": "#RES-883",
+      "name": "Emma Watson",
+      "phone": "+447987654321",
+      "guests": 2,
+      "date": "2026-08-17",
+      "time": "20:00",
+      "status": "confirmed",
+      "createdAt": "2026-08-17T08:03:42.033Z"
+    }
+  ],
+  "loyalty": {
+    "+447911123456": {
+      "phone": "+447911123456",
+      "name": "Hamza Malik",
+      "points": 420,
+      "tier": "Gold",
+      "totalSpent": 420,
+      "visitCount": 14,
+      "claimedRewards": []
+    },
+    "+447700900077": {
+      "phone": "+447700900077",
+      "name": "Sarah Jenkins",
+      "points": 150,
+      "tier": "Silver",
+      "totalSpent": 150,
+      "visitCount": 5,
+      "claimedRewards": []
+    }
+  }
+}
