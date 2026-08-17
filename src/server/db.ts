@@ -161,31 +161,41 @@ function initialSeed(): EatsyDB {
 }
 
 function loadDB(): EatsyDB {
+  if (memoryCache) return memoryCache;
   try {
+    if (typeof fs === "undefined" || !fs.existsSync) {
+      memoryCache = initialSeed();
+      return memoryCache;
+    }
     if (!fs.existsSync(DB_DIR)) {
       fs.mkdirSync(DB_DIR, { recursive: true });
     }
     if (!fs.existsSync(DB_FILE)) {
       const data = initialSeed();
       fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), "utf-8");
-      return data;
+      memoryCache = data;
+      return memoryCache;
     }
     const raw = fs.readFileSync(DB_FILE, "utf-8");
-    return JSON.parse(raw) as EatsyDB;
+    memoryCache = JSON.parse(raw) as EatsyDB;
+    return memoryCache;
   } catch (err) {
-    console.error("[EatsyDB] Error loading DB, falling back to seed:", err);
-    return initialSeed();
+    console.error("[EatsyDB] Error loading DB, using memory cache fallback:", err);
+    if (!memoryCache) memoryCache = initialSeed();
+    return memoryCache;
   }
 }
 
-function saveDB(db: EatsyDB) {
+function saveDB(dbData: EatsyDB) {
+  memoryCache = dbData;
   try {
+    if (typeof fs === "undefined" || !fs.existsSync) return;
     if (!fs.existsSync(DB_DIR)) {
       fs.mkdirSync(DB_DIR, { recursive: true });
     }
-    fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2), "utf-8");
+    fs.writeFileSync(DB_FILE, JSON.stringify(dbData, null, 2), "utf-8");
   } catch (err) {
-    console.error("[EatsyDB] Error saving DB:", err);
+    console.warn("[EatsyDB] File write failed (using memory cache):", err);
   }
 }
 
