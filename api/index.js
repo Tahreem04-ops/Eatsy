@@ -1,4 +1,4 @@
-﻿import server from "../dist/server/server.js";
+import server from "../dist/server/server.js";
 
 function getRequestPath(req) {
   const headerPath = req.headers["x-matched-path"] || req.headers["x-forwarded-uri"];
@@ -42,13 +42,12 @@ export default async function handler(req, res) {
       }
     }
 
-    const webRequest = new Request(fullUrl, {
-      method: req.method,
-      headers,
-      body,
-    });
+    const fetchFn = typeof server?.fetch === "function" ? server.fetch : server?.default?.fetch;
+    if (!fetchFn) {
+      throw new Error("Server fetch function not found on exported server module: " + Object.keys(server || {}));
+    }
 
-    const webResponse = await server.fetch(webRequest, process.env, {});
+    const webResponse = await fetchFn(webRequest, process.env, {});
 
     res.statusCode = webResponse.status;
     webResponse.headers.forEach((value, key) => {
