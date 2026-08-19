@@ -47,6 +47,12 @@ export default async function handler(req, res) {
       throw new Error("Server fetch function not found on exported server module: " + Object.keys(server || {}));
     }
 
+    const webRequest = new Request(fullUrl, {
+      method: req.method,
+      headers,
+      body: body?.length ? body : undefined,
+    });
+
     const webResponse = await fetchFn(webRequest, process.env, {});
 
     res.statusCode = webResponse.status;
