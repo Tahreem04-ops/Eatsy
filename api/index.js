@@ -1,10 +1,26 @@
 import server from "../dist/server/server.js";
 
+function getRequestPath(req) {
+  const headerPath = req.headers["x-forwarded-uri"] || req.headers["x-matched-path"];
+  let path = typeof headerPath === "string" && headerPath && headerPath !== "/api" ? headerPath : req.url;
+
+  if (!path) return "/";
+
+  if (path === "/api" || path.startsWith("/api/")) {
+    path = path.replace(/^\/api/, "") || "/";
+  } else if (path.startsWith("/api?")) {
+    path = path.replace(/^\/api\?/, "/?");
+  }
+
+  return path;
+}
+
 export default async function handler(req, res) {
   try {
     const protocol = req.headers["x-forwarded-proto"] || "https";
     const host = req.headers["x-forwarded-host"] || req.headers.host || "localhost";
-    const fullUrl = `${protocol}://${host}${req.url}`;
+    const requestPath = getRequestPath(req);
+    const fullUrl = `${protocol}://${host}${requestPath}`;
 
     let body = undefined;
     if (req.method !== "GET" && req.method !== "HEAD") {
@@ -37,3 +53,4 @@ export default async function handler(req, res) {
     res.end("<h1>500 Internal Server Error</h1>");
   }
 }
+
