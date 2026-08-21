@@ -16,6 +16,28 @@
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home — Landing Page & Commission Calculator
+![Home Page](public/screenshots/home.png)
+
+### 🍕 QR Table Menu
+![Menu Page](public/screenshots/menu.png)
+
+### 👨‍🍳 Kitchen Display System (KDS)
+![Kitchen Page](public/screenshots/kitchen.png)
+
+### 🎁 Guest Loyalty & Rewards
+![Loyalty Page](public/screenshots/loyalty.png)
+
+### 📊 Analytics Dashboard
+![Analytics Page](public/screenshots/analytics.png)
+
+### 📅 Book a Table
+![Book Page](public/screenshots/book.png)
+
+---
+
 ## ✨ Key Features
 
 - **📱 QR Table Ordering (`/menu`)**:
